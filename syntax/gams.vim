@@ -24,6 +24,7 @@ syn keyword gamsStatement       display
 syn keyword gamsStatement       option 
 syn keyword gamsStatement       Alias 
 syn keyword gamsStatement       Scalar 
+syn keyword gamsStatement       sameas
 syn keyword gamsStatement       xxpto
 " equation definitions ending with two dots?
 
@@ -32,7 +33,7 @@ syn keyword gamsStatement	free
 syn keyword gamsStatement	positive 
 syn keyword gamsStatement       put file putclose abort
 syn keyword gamsRepeat          loop while repeat until
-syn keyword gamsConditional     if else Elseif ifi not exist
+syn keyword gamsConditional     if else Elseif ifi exist
 syn keyword gamsConditional     ne ge le eq  
 syn keyword gamsRepeat          for to Downto By 
 
@@ -71,6 +72,7 @@ syn match gamsSpecial "\$offglobal"
 
 syn keyword gamsSpecial execute_load execute_unload
 
+" ? how to highlight dollar conditions e.g. variable(i)$(sameas(i,j))
 
 syntax keyword gamsFunction     ABS ASC sigmoid  
 syntax keyword gamsFunction      acos acosh asin asinh atan atan2
@@ -114,8 +116,11 @@ syntax match gamsComment       "^\*.*"
 "syn region gamsComment start="^\*" end="^\*" 
 
 syntax region  gamsComment         start="^\$ontext" end="^\$offtext"
+" would highlight and/or everywhere
 " syn match   gamsMathsOperator   "-\|=\|[:<>+\*^/\\]\|AND\|OR"
-syn match   gamsMathsOperator   "-\|=\|[:<>+^/\\]\|AND\|OR"
+syn match gamsMathsOperator "-\|=\|[:+^/\\]"
+syn match gamsMathsOperator "\A\(AND\|OR\|XOR\|NOT\)\A"
+
 " ?? =e=, =g=, =l=
 
 " to include .csv files
