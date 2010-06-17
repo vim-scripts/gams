@@ -72,7 +72,8 @@ syn match gamsSpecial "\$offglobal"
 
 syn keyword gamsSpecial execute_load execute_unload
 
-" ? how to highlight dollar conditions e.g. variable(i)$(sameas(i,j))
+syn match gamsSpecial "\$("he=e-1
+
 
 syntax keyword gamsFunction     ABS ASC sigmoid  
 syntax keyword gamsFunction      acos acosh asin asinh atan atan2
@@ -119,7 +120,7 @@ syntax region  gamsComment         start="^\$ontext" end="^\$offtext"
 " would highlight and/or everywhere
 " syn match   gamsMathsOperator   "-\|=\|[:<>+\*^/\\]\|AND\|OR"
 syn match gamsMathsOperator "-\|=\|[:+^/\\]"
-syn match gamsMathsOperator "\A\(AND\|OR\|XOR\|NOT\)\A"
+syn match gamsMathsOperator "\A\(AND\|OR\|XOR\|NOT\)\A"hs=s+1,he=e-1
 
 " ?? =e=, =g=, =l=
 
