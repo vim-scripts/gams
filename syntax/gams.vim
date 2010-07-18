@@ -34,7 +34,7 @@ syn keyword gamsStatement	positive
 syn keyword gamsStatement       put file putclose abort
 syn keyword gamsRepeat          loop while repeat until
 syn keyword gamsConditional     if else Elseif ifi exist
-syn keyword gamsConditional     ne ge le eq  
+syn keyword gamsConditional     ne ge le eq gt lt
 syn keyword gamsRepeat          for to Downto By 
 
 syn match gamsSpecial "\$option" 
@@ -55,9 +55,11 @@ syn match gamsSpecial "\$unload"
 syn match gamsSpecial "\$include"
 syn match gamsSpecial "\$batinclude"
 syn match gamsSpecial "\$libinclude"
+syn match gamsSpecial "\$sysinclude"
 syn match gamsSpecial "\$goto"
 syn match gamsSpecial "\$label"
 syn match gamsSpecial "\$exit"
+syn match gamsSpecial "\$kill"
 
 syn match gamsSpecial "\$offlisting"
 syn match gamsSpecial "\$onlisting"
@@ -66,9 +68,95 @@ syn match gamsSpecial "\$offeolcom"
 
 syn match gamsSpecial "\$stars"
 syn match gamsSpecial "\$setglobal"
+syn match gamsSpecial "\$dropglobal"
+syn match gamsSpecial "\$setlocal"
+syn match gamsSpecial "\$droplocal"
+syn match gamsSpecial "\$setenv"
+syn match gamsSpecial "\$setnames"
 
 syn match gamsSpecial "\$onglobal"
 syn match gamsSpecial "\$offglobal"
+
+syn match gamsSpecial "\$setargs"
+syn match gamsSpecial "\$onmulti"
+syn match gamsSpecial "\$offmulti"
+syn match gamsSpecial "\$onempty"
+syn match gamsSpecial "\$offempty"
+
+syn match gamsSpecial "\$comment"
+syn match gamsSpecial "\$dollar"
+syn match gamsSpecial "\$double"
+syn match gamsSpecial "\$single"
+syn match gamsSpecial "\$echo"
+syn match gamsSpecial "\$echon"
+syn match gamsSpecial "\$eject"
+syn match gamsSpecial "\$error"
+syn match gamsSpecial "\$escape"
+syn match gamsSpecial "\$expose"
+syn match gamsSpecial "\$hidden"
+syn match gamsSpecial "\$hide"
+
+syn match gamsSpecial "\$inlinecom"
+syn match gamsSpecial "\$lines"
+syn match gamsSpecial "\$log"
+
+syn match gamsSpecial "\$maxcol"
+syn match gamsSpecial "\$mincol"
+syn match gamsSpecial "\$offdigit"
+syn match gamsSpecial "\$ondigit"
+syn match gamsSpecial "\$offend"
+syn match gamsSpecial "\$onend"
+syn match gamsSpecial "\$offeps"
+syn match gamsSpecial "\$oneps"
+syn match gamsSpecial "\$offinline"
+syn match gamsSpecial "\$oninline"
+syn match gamsSpecial "\$offmargin"
+syn match gamsSpecial "\$onmargin"
+syn match gamsSpecial "\$offnestcom"
+syn match gamsSpecial "\$onnestcom"
+
+syn match gamsSpecial "\$onput"
+syn match gamsSpecial "\$onputs"
+syn match gamsSpecial "\$onputv"
+syn match gamsSpecial "\$offput"
+
+syn match gamsSpecial "\$onsymlist"
+syn match gamsSpecial "\$offsymlist"
+syn match gamsSpecial "\$onsymxref"
+syn match gamsSpecial "\$offsymxref"
+syn match gamsSpecial "\$onuellist"
+syn match gamsSpecial "\$offuellist"
+syn match gamsSpecial "\$onuelxref"
+syn match gamsSpecial "\$offuelxref"
+
+syn match gamsSpecial "\$onundf"
+syn match gamsSpecial "\$offundf"
+syn match gamsSpecial "\$onupper"
+syn match gamsSpecial "\$offupper"
+syn match gamsSpecial "\$onwarning"
+syn match gamsSpecial "\$offwarning"
+
+syn match gamsSpecial "\$phantom"
+syn match gamsSpecial "\$prefixpath"
+syn match gamsSpecial "\$protect"
+syn match gamsSpecial "\$purge"
+syn match gamsSpecial "\$remark"
+
+syn match gamsSpecial "\$setcomps"
+syn match gamsSpecial "\$setddlist"
+syn match gamsSpecial "\$shift"
+syn match gamsSpecial "\$show"
+
+syn match gamsSpecial "\$use205"
+syn match gamsSpecial "\$use225"
+syn match gamsSpecial "\$use999"
+
+syn match gamsSpecial "\$title"
+syn match gamsSpecial "\$stitle"
+
+syn match gamsSpecial "\$abort"
+syn match gamsSpecial "\$terminate"
+syn match gamsSpecial "\$stop"
 
 syn keyword gamsSpecial execute_load execute_unload
 
