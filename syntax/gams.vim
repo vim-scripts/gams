@@ -166,7 +166,7 @@ syn match gamsSpecial "\$("he=e-1
 syntax keyword gamsFunction     ABS ASC sigmoid  
 syntax keyword gamsFunction      acos acosh asin asinh atan atan2
 syntax keyword gamsFunction      atanh ceil ctime cos cosh exp floor log log10
-syntax keyword gamsFunction      max min precision round sin sinh sqrt tan tanh
+syntax keyword gamsFunction      max min precision round sin sinh sqrt tan tanh sqr
 syntax keyword gamsFunction      time trunc div
 syntax keyword gamsFunction      beta betareg binomial edist entropy errorf fact
 syntax keyword gamsFunction      gamma gammareg logbeta loggamma normal
